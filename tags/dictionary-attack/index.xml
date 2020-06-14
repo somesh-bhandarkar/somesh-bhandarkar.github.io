@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dictionary Attack on </title>
+    <link>https://somesh-bhandarkar.github.io/tags/dictionary-attack/</link>
+    <description>Recent content in Dictionary Attack on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jun 2020 15:15:59 -0400</lastBuildDate>
+    
+	<atom:link href="https://somesh-bhandarkar.github.io/tags/dictionary-attack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Breaking MD5 algorithm using a Dictionary Attack</title>
+      <link>https://somesh-bhandarkar.github.io/post/md5_breaker/</link>
+      <pubDate>Sun, 14 Jun 2020 15:15:59 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/post/md5_breaker/</guid>
+      <description>#!/usr/bin/env python3 # coding #utf-8 # Author: Somesh Bhandarkar # This python program is a project #  # # import hashlib, sys def errorhandling(hash_input, wordlist_input): if len(hash_input) !</description>
+    </item>
+    
+  </channel>
+</rss>
