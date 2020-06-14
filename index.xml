@@ -6,10 +6,19 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 20:15:26 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 14:55:28 -0400</lastBuildDate>
     
 	<atom:link href="https://somesh-bhandarkar.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Findong Prime Factors of a Large Number usinf Z3 SMT Solver</title>
+      <link>https://somesh-bhandarkar.github.io/post/z3smt-primefac-1/</link>
+      <pubDate>Sun, 14 Jun 2020 14:55:28 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/post/z3smt-primefac-1/</guid>
+      <description>#! /usr/bin/env python # # Author: Somesh Bhandarkar # UID: 116715843 # This program is written as a project for the course ENPM697 ## # The program uses z3 SMT solver https://github.</description>
+    </item>
     
     <item>
       <title>Kioptrix 4 Vulnhub</title>
