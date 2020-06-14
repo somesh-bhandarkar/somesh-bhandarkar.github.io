@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fiestel cipher on </title>
+    <link>https://somesh-bhandarkar.github.io/tags/fiestel-cipher/</link>
+    <description>Recent content in fiestel cipher on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jun 2020 15:38:42 -0400</lastBuildDate>
+    
+	<atom:link href="https://somesh-bhandarkar.github.io/tags/fiestel-cipher/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fiestel_cipher in python</title>
+      <link>https://somesh-bhandarkar.github.io/post/fiestel_cipher/</link>
+      <pubDate>Sun, 14 Jun 2020 15:38:42 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/post/fiestel_cipher/</guid>
+      <description>This is simple approach for fiestel cipher
+import random import hmac import hashlib def xor(byteseq1, byteseq2): l1 = [b for b in byteseq1] l2 = [b for b in byteseq2] l1xorl2 = [bytes([elem1^elem2]) for elem1,elem2 in zip(l1,l2)] result = b&amp;#39;&amp;#39;.</description>
+    </item>
+    
+  </channel>
+</rss>

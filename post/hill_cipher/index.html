@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="light"><head>
+    <title> Somesh Bhandarkar | Hill_cipher in python </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.70.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Graduate Candidate in Cybersecurity at the University of Maryland, College Park">
+    
+    <link rel="stylesheet" href="https://somesh-bhandarkar.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://somesh-bhandarkar.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://somesh-bhandarkar.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://somesh-bhandarkar.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://somesh-bhandarkar.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://somesh-bhandarkar.github.io/post/hill_cipher/">
+    
+    
+    <script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://somesh-bhandarkar.github.io/img/prof.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m Somesh Bhandarkar</a></h3>
+        <div class="description">
+          <p>Graduate Candidate in Cybersecurity at the University of Maryland, College Park</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/linkedin.com/in/somesh-bhandarkar" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/somesh-bhandarkar" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="bsomesh98@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Somesh Bhandarkar 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/post/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/" title="">About</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Hill_cipher in python
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i><span class="date">Sun, Jun 14, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">1-minute read</span>
+        </div>
+        
+        </div>
+
+    <p>This is a simple approach to coding the hill cipher.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> pprint <span style="color:#f92672">import</span> pprint
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">matrixinvmod26</span>(M):
+    Minv <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>inv(M)
+    Mdet <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>det(M)
+
+    Mod26invTable <span style="color:#f92672">=</span> {}
+    <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>):
+        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>):
+            <span style="color:#66d9ef">if</span> (m<span style="color:#f92672">*</span>n)<span style="color:#f92672">%</span><span style="color:#ae81ff">26</span><span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>:
+                Mod26invTable[m] <span style="color:#f92672">=</span> n
+           <span style="color:#75715e">#     print(m,n)</span>
+
+    Mdet26 <span style="color:#f92672">=</span> Mdet<span style="color:#f92672">%</span><span style="color:#ae81ff">26</span>
+    <span style="color:#66d9ef">if</span> Mdet26 <span style="color:#f92672">in</span> Mod26invTable:
+        Mdetinv26 <span style="color:#f92672">=</span> Mod26invTable[Mdet26]
+    <span style="color:#66d9ef">else</span>:
+        Mdetinv26 <span style="color:#f92672">=</span> None 
+    Madj <span style="color:#f92672">=</span> Mdet<span style="color:#f92672">*</span>Minv
+    Madj26 <span style="color:#f92672">=</span> Madj<span style="color:#f92672">%</span><span style="color:#ae81ff">26</span>
+
+    Minv26 <span style="color:#f92672">=</span> (Mdetinv26<span style="color:#f92672">*</span>Madj26)<span style="color:#f92672">%</span><span style="color:#ae81ff">26</span>
+    Minv26 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>matrix<span style="color:#f92672">.</span>round(Minv26, <span style="color:#ae81ff">0</span>)<span style="color:#f92672">%</span><span style="color:#ae81ff">26</span>
+    <span style="color:#66d9ef">return</span> Minv26
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hill_enc</span>(M, plaintext):
+    plaintext <span style="color:#f92672">=</span>  plaintext<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34; &#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>)
+    plaintext <span style="color:#f92672">=</span> plaintext<span style="color:#f92672">.</span>lower()
+    <span style="color:#66d9ef">while</span> len(plaintext) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+        plaintext <span style="color:#f92672">=</span> plaintext <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;x&#34;</span>
+
+    char_list <span style="color:#f92672">=</span> [ord(c)<span style="color:#f92672">-</span><span style="color:#ae81ff">97</span> <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> plaintext]
+    cit<span style="color:#f92672">=</span>[]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(char_list),<span style="color:#ae81ff">3</span>):  
+            sublist <span style="color:#f92672">=</span> char_list[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>]  
+            mat_mul <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>matmul(M,sublist) <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span>
+            mult_res <span style="color:#f92672">=</span> [chr(i<span style="color:#f92672">+</span><span style="color:#ae81ff">97</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> mat_mul]
+            cit<span style="color:#f92672">=</span>cit<span style="color:#f92672">+</span>mult_res
+
+    c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(cit)
+    <span style="color:#66d9ef">return</span> c
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hill_dec</span>(M, ciphertext):
+    ciphertext <span style="color:#f92672">=</span>  ciphertext<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34; &#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>)
+    ciphertext <span style="color:#f92672">=</span> ciphertext<span style="color:#f92672">.</span>lower()
+    Minv <span style="color:#f92672">=</span> matrixinvmod26(M)
+    Minv <span style="color:#f92672">=</span> Minv<span style="color:#f92672">.</span>astype(int)
+    char_list <span style="color:#f92672">=</span> [ord(c)<span style="color:#f92672">-</span><span style="color:#ae81ff">97</span> <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> ciphertext]
+    pla<span style="color:#f92672">=</span>[]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(char_list),<span style="color:#ae81ff">3</span>):  
+            sublist <span style="color:#f92672">=</span> char_list[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>]  
+            mat_mul <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>matmul(Minv,sublist) <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span>
+            mult_res <span style="color:#f92672">=</span> [chr(i<span style="color:#f92672">+</span><span style="color:#ae81ff">97</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> mat_mul]
+            pla<span style="color:#f92672">=</span>pla<span style="color:#f92672">+</span>mult_res
+            
+    p<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(pla)
+    <span style="color:#66d9ef">return</span> p
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    plaintext2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;plaintext&#34;</span>
+    ciphertext2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;atakvninz&#34;</span>
+    M <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">5</span>],[<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">21</span>],[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">19</span>]])
+    cipher <span style="color:#f92672">=</span> hill_enc(M,plaintext2)
+    <span style="color:#66d9ef">print</span>(cipher)
+    decipher <span style="color:#f92672">=</span> hill_dec(M,ciphertext2)
+    <span style="color:#66d9ef">print</span>(decipher)
+
+<span style="color:#66d9ef">if</span> __name__<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;__main__&#34;</span>:
+    main()
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>

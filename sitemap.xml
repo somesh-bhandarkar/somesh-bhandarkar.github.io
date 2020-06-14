@@ -4,7 +4,67 @@
   
   <url>
     <loc>https://somesh-bhandarkar.github.io/</loc>
-    <lastmod>2020-06-14T15:21:41-04:00</lastmod>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/tags/cryptography/</loc>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/tags/des/</loc>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/post/des/</loc>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/post/</loc>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/tags/python/</loc>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/tags/python3/</loc>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/tags/</loc>
+    <lastmod>2020-06-14T15:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/post/hill_cipher/</loc>
+    <lastmod>2020-06-14T15:40:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/tags/fiestel-cipher/</loc>
+    <lastmod>2020-06-14T15:38:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/post/fiestel_cipher/</loc>
+    <lastmod>2020-06-14T15:38:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/tags/caesar-cipher/</loc>
+    <lastmod>2020-06-14T15:36:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somesh-bhandarkar.github.io/post/caesar_cipher/</loc>
+    <lastmod>2020-06-14T15:36:35-04:00</lastmod>
   </url>
   
   <url>
@@ -13,22 +73,7 @@
   </url>
   
   <url>
-    <loc>https://somesh-bhandarkar.github.io/post/</loc>
-    <lastmod>2020-06-14T15:21:41-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://somesh-bhandarkar.github.io/tags/pussle/</loc>
-    <lastmod>2020-06-14T15:21:41-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://somesh-bhandarkar.github.io/tags/python/</loc>
-    <lastmod>2020-06-14T15:21:41-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://somesh-bhandarkar.github.io/tags/python3/</loc>
     <lastmod>2020-06-14T15:21:41-04:00</lastmod>
   </url>
   
@@ -39,11 +84,6 @@
   
   <url>
     <loc>https://somesh-bhandarkar.github.io/post/mine_solver/</loc>
-    <lastmod>2020-06-14T15:21:41-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://somesh-bhandarkar.github.io/tags/</loc>
     <lastmod>2020-06-14T15:21:41-04:00</lastmod>
   </url>
   

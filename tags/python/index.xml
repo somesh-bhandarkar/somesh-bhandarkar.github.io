@@ -6,10 +6,30 @@
     <description>Recent content in python on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 15:21:41 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 15:42:53 -0400</lastBuildDate>
     
 	<atom:link href="https://somesh-bhandarkar.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fiestel_cipher in python</title>
+      <link>https://somesh-bhandarkar.github.io/post/fiestel_cipher/</link>
+      <pubDate>Sun, 14 Jun 2020 15:38:42 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/post/fiestel_cipher/</guid>
+      <description>This is simple approach for fiestel cipher
+import random import hmac import hashlib def xor(byteseq1, byteseq2): l1 = [b for b in byteseq1] l2 = [b for b in byteseq2] l1xorl2 = [bytes([elem1^elem2]) for elem1,elem2 in zip(l1,l2)] result = b&amp;#39;&amp;#39;.</description>
+    </item>
+    
+    <item>
+      <title>Caesar_cipher in python</title>
+      <link>https://somesh-bhandarkar.github.io/post/caesar_cipher/</link>
+      <pubDate>Sun, 14 Jun 2020 15:36:35 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/post/caesar_cipher/</guid>
+      <description>This is a program of Caesar Cipher in python3.
+#!/usr/bin/env python3 # Author: Somesh Bhandarkar # # # import sys def caesar_str_enc(plaintext, K): ciphertext=&amp;#34;&amp;#34; for ch in plaintext: encch = caesar_ch_enc(ch, K) ciphertext = ciphertext + encch return ciphertext def caesar_ch_enc(ch, K): if ch == &amp;#34; &amp;#34;: enc_char = &amp;#34; &amp;#34; return enc_char else: pt = ord(ch) - 97 coded_pt = int((pt + K) % 26) enc_char = chr(coded_pt + 97) return enc_char def caesar_str_dec(ciphertext, K): plaintext = &amp;#34;&amp;#34; for ch in ciphertext: decch = caesar_ch_dec(ch, K) plaintext = plaintext + decch return plaintext def caesar_ch_dec(ch, K): if ch == &amp;#34; &amp;#34;: dec_char = &amp;#34; &amp;#34; return dec_char else: ct = ord(ch) - 97 coded_ct = int((ct - K) % 26) dec_char = chr(coded_ct + 97) return dec_char def test_module(): K = int(sys.</description>
+    </item>
     
     <item>
       <title>Solving Minesweeper using Z3 SMT solver</title>

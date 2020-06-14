@@ -6,10 +6,64 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 15:21:41 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 15:42:53 -0400</lastBuildDate>
     
 	<atom:link href="https://somesh-bhandarkar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cryptography</title>
+      <link>https://somesh-bhandarkar.github.io/tags/cryptography/</link>
+      <pubDate>Sun, 14 Jun 2020 15:42:53 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/tags/cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DES</title>
+      <link>https://somesh-bhandarkar.github.io/tags/des/</link>
+      <pubDate>Sun, 14 Jun 2020 15:42:53 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/tags/des/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://somesh-bhandarkar.github.io/tags/python/</link>
+      <pubDate>Sun, 14 Jun 2020 15:42:53 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python3</title>
+      <link>https://somesh-bhandarkar.github.io/tags/python3/</link>
+      <pubDate>Sun, 14 Jun 2020 15:42:53 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/tags/python3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fiestel cipher</title>
+      <link>https://somesh-bhandarkar.github.io/tags/fiestel-cipher/</link>
+      <pubDate>Sun, 14 Jun 2020 15:38:42 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/tags/fiestel-cipher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>caesar cipher</title>
+      <link>https://somesh-bhandarkar.github.io/tags/caesar-cipher/</link>
+      <pubDate>Sun, 14 Jun 2020 15:36:35 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/tags/caesar-cipher/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Minesweeper</title>
@@ -26,24 +80,6 @@
       <pubDate>Sun, 14 Jun 2020 15:21:41 -0400</pubDate>
       
       <guid>https://somesh-bhandarkar.github.io/tags/pussle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://somesh-bhandarkar.github.io/tags/python/</link>
-      <pubDate>Sun, 14 Jun 2020 15:21:41 -0400</pubDate>
-      
-      <guid>https://somesh-bhandarkar.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python3</title>
-      <link>https://somesh-bhandarkar.github.io/tags/python3/</link>
-      <pubDate>Sun, 14 Jun 2020 15:21:41 -0400</pubDate>
-      
-      <guid>https://somesh-bhandarkar.github.io/tags/python3/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="light"><head>
+    <title> Somesh Bhandarkar | Des in python </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.70.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Graduate Candidate in Cybersecurity at the University of Maryland, College Park">
+    
+    <link rel="stylesheet" href="https://somesh-bhandarkar.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://somesh-bhandarkar.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://somesh-bhandarkar.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://somesh-bhandarkar.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://somesh-bhandarkar.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://somesh-bhandarkar.github.io/post/des/">
+    
+    
+    <script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://somesh-bhandarkar.github.io/img/prof.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m Somesh Bhandarkar</a></h3>
+        <div class="description">
+          <p>Graduate Candidate in Cybersecurity at the University of Maryland, College Park</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/linkedin.com/in/somesh-bhandarkar" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/somesh-bhandarkar" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="bsomesh98@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Somesh Bhandarkar 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/post/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/" title="">About</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Des in python
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i><span class="date">Sun, Jun 14, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
+        </div>
+        
+        </div>
+
+    <p>A python program for DES</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/env python3</span>
+<span style="color:#75715e"># coding: utf-8</span>
+<span style="color:#75715e"># Final Program</span>
+<span style="color:#75715e"># Name: Somesh Bhandarkar</span>
+
+
+
+BookInitPermOrder <span style="color:#f92672">=</span> [<span style="color:#ae81ff">58</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">42</span>,<span style="color:#ae81ff">34</span>,<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>,
+                   <span style="color:#ae81ff">60</span>,<span style="color:#ae81ff">52</span>,<span style="color:#ae81ff">44</span>,<span style="color:#ae81ff">36</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">4</span>,
+                   <span style="color:#ae81ff">62</span>,<span style="color:#ae81ff">54</span>,<span style="color:#ae81ff">46</span>,<span style="color:#ae81ff">38</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">22</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">6</span>,
+                   <span style="color:#ae81ff">64</span>,<span style="color:#ae81ff">56</span>,<span style="color:#ae81ff">48</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">8</span>,
+                   <span style="color:#ae81ff">57</span>,<span style="color:#ae81ff">49</span>,<span style="color:#ae81ff">41</span>,<span style="color:#ae81ff">33</span>,<span style="color:#ae81ff">25</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">1</span>,
+                   <span style="color:#ae81ff">59</span>,<span style="color:#ae81ff">51</span>,<span style="color:#ae81ff">43</span>,<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">3</span>,
+                   <span style="color:#ae81ff">61</span>,<span style="color:#ae81ff">53</span>,<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">37</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">5</span>,
+                   <span style="color:#ae81ff">63</span>,<span style="color:#ae81ff">55</span>,<span style="color:#ae81ff">47</span>,<span style="color:#ae81ff">39</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">7</span>]
+
+
+BookInvInitPermOrder <span style="color:#f92672">=</span> [<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">48</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">56</span>,<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">64</span>,<span style="color:#ae81ff">32</span>,
+                        <span style="color:#ae81ff">39</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">47</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">55</span>,<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">63</span>,<span style="color:#ae81ff">31</span>,
+                        <span style="color:#ae81ff">38</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">46</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">54</span>,<span style="color:#ae81ff">22</span>,<span style="color:#ae81ff">62</span>,<span style="color:#ae81ff">30</span>,
+                        <span style="color:#ae81ff">37</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">53</span>,<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">61</span>,<span style="color:#ae81ff">29</span>,
+                        <span style="color:#ae81ff">36</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">44</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">52</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">60</span>,<span style="color:#ae81ff">28</span>,
+                        <span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">43</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">51</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">59</span>,<span style="color:#ae81ff">27</span>,
+                        <span style="color:#ae81ff">34</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">42</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">58</span>,<span style="color:#ae81ff">26</span>,
+                        <span style="color:#ae81ff">33</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">41</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">49</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">57</span>,<span style="color:#ae81ff">25</span>]
+
+
+PC1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">57</span>,<span style="color:#ae81ff">49</span>,<span style="color:#ae81ff">41</span>,<span style="color:#ae81ff">33</span>,<span style="color:#ae81ff">25</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">58</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">42</span>,<span style="color:#ae81ff">34</span>,<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">59</span>,<span style="color:#ae81ff">51</span>,<span style="color:#ae81ff">43</span>,<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">60</span>,<span style="color:#ae81ff">52</span>,<span style="color:#ae81ff">44</span>,<span style="color:#ae81ff">36</span>,<span style="color:#ae81ff">63</span>,<span style="color:#ae81ff">55</span>,<span style="color:#ae81ff">47</span>,<span style="color:#ae81ff">39</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">15</span>,
+       <span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">62</span>,<span style="color:#ae81ff">54</span>,<span style="color:#ae81ff">46</span>,<span style="color:#ae81ff">38</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">22</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">61</span>,<span style="color:#ae81ff">53</span>,<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">37</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">4</span>]
+PC2 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">41</span>,<span style="color:#ae81ff">52</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">37</span>,<span style="color:#ae81ff">47</span>,<span style="color:#ae81ff">55</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">51</span>,<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">33</span>,<span style="color:#ae81ff">48</span>,
+       <span style="color:#ae81ff">44</span>,<span style="color:#ae81ff">49</span>,<span style="color:#ae81ff">39</span>,<span style="color:#ae81ff">56</span>,<span style="color:#ae81ff">34</span>,<span style="color:#ae81ff">53</span>,<span style="color:#ae81ff">46</span>,<span style="color:#ae81ff">42</span>,<span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">36</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">32</span>]
+
+E_TABLE <span style="color:#f92672">=</span> [<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">17</span>,
+<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">22</span>,<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">25</span>,<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">25</span>,<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">1</span>]
+
+P <span style="color:#f92672">=</span> [<span style="color:#ae81ff">16</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">21</span>,<span style="color:#ae81ff">29</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">28</span>,<span style="color:#ae81ff">17</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">26</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">18</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">22</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">25</span>]
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">byteseq2binstr</span>(byteseq):
+    bitslist2 <span style="color:#f92672">=</span> [bin(int(b))[<span style="color:#ae81ff">2</span>:]<span style="color:#f92672">.</span>zfill(<span style="color:#ae81ff">8</span>) <span style="color:#66d9ef">for</span> b <span style="color:#f92672">in</span> byteseq]
+    allbitsstr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(bitslist2)
+    
+    <span style="color:#66d9ef">return</span> allbitsstr
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">after_PC1</span>(input_key_64bit, PC1):
+    key_56bit <span style="color:#f92672">=</span> []
+    key_56bit <span style="color:#f92672">+=</span> [input_key_64bit[index<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> PC1]
+    key_56bit <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(key_56bit)
+    <span style="color:#66d9ef">return</span> key_56bit
+
+<span style="color:#75715e">#key_56 = after_PC1(demo_key, PC1)</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">two_halves</span>(key_56bit):
+    left_half, right_half <span style="color:#f92672">=</span> key_56bit[:<span style="color:#ae81ff">28</span>], key_56bit[<span style="color:#ae81ff">28</span>:]
+    <span style="color:#66d9ef">return</span> left_half, right_half
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">des_keygen</span>(C_inp, D_inp, roundindex):
+    <span style="color:#75715e"># Implement Figure 6</span>
+    C_shifted <span style="color:#f92672">=</span> C_inp[roundindex:] <span style="color:#f92672">+</span> C_inp[:roundindex]
+    D_shifted <span style="color:#f92672">=</span> D_inp[roundindex:] <span style="color:#f92672">+</span> D_inp[:roundindex]
+    key_48bit <span style="color:#f92672">=</span> []
+    key_56bit_local <span style="color:#f92672">=</span> C_shifted <span style="color:#f92672">+</span> D_shifted
+    key_48bit <span style="color:#f92672">+=</span> [key_56bit_local[index<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> PC2]
+    key48 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(key_48bit)
+    C_out <span style="color:#f92672">=</span> C_shifted
+    D_out <span style="color:#f92672">=</span> D_shifted
+    <span style="color:#75715e">#print(list(key48))</span>
+    <span style="color:#66d9ef">return</span> key48, C_out, D_out
+
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">des_key_generation</span>(input_key_64bit):
+    subkey <span style="color:#f92672">=</span> []
+    permuted_choice_1 <span style="color:#f92672">=</span> after_PC1(input_key_64bit, PC1)
+    C_inp, D_inp <span style="color:#f92672">=</span> two_halves(permuted_choice_1)
+    left_shift_index <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>]
+    
+    <span style="color:#66d9ef">for</span> round <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">16</span>):
+        round_key, C_out, D_out <span style="color:#f92672">=</span> des_keygen(C_inp, D_inp, left_shift_index[round])
+        C_inp <span style="color:#f92672">=</span> C_out
+        D_inp <span style="color:#f92672">=</span> D_out
+        subkey<span style="color:#f92672">.</span>append(round_key) 
+    <span style="color:#66d9ef">return</span> subkey
+    
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Permutation</span>(bitstr, permorderlist):
+    permedbitstr <span style="color:#f92672">=</span> None
+    InitPermOrder <span style="color:#f92672">=</span> [x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> permorderlist]
+    inputbitslistperm <span style="color:#f92672">=</span> [bitstr[b] <span style="color:#66d9ef">for</span> b <span style="color:#f92672">in</span> InitPermOrder]
+    permedbitstr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(inputbitslistperm)
+    <span style="color:#66d9ef">return</span> permedbitstr
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Expansion</span>(inputbitstr32, e_table):
+    outputbitstr48 <span style="color:#f92672">=</span> []
+    outputbitstr48 <span style="color:#f92672">=</span> [inputbitstr32[index<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> e_table]
+    outputbitstr48 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(outputbitstr48)
+    <span style="color:#66d9ef">return</span> outputbitstr48
+
+<span style="color:#75715e">#bits32 = &#34;11110000101010101111000010101010&#34;</span>
+<span style="color:#75715e">#out_bits48 = Expansion(bits32, E_TABLE)</span>
+<span style="color:#75715e">#print (out_bits48)</span>
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">permutation_function</span>(sbox_value, P):
+    outputbitstr32 <span style="color:#f92672">=</span> []
+    outputbitstr32 <span style="color:#f92672">=</span> [sbox_value[index<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> P]
+    outputbitstr32 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(outputbitstr32)
+    <span style="color:#66d9ef">return</span> outputbitstr32
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">XORbits</span>(bitstr1,bitstr2):
+    xor_result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+    outstr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> range(len(bitstr1)):
+        <span style="color:#66d9ef">if</span> bitstr1[index] <span style="color:#f92672">==</span> bitstr2[index]:
+            xor_result <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;0&#34;</span>
+        <span style="color:#66d9ef">else</span>:
+            xor_result <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;1&#34;</span>
+    <span style="color:#75715e">#print(&#34;XOR:&#34;, xor_result)</span>
+    <span style="color:#75715e">#xor_result = outstr</span>
+    <span style="color:#66d9ef">return</span> xor_result
+<span style="color:#75715e">#bits1 = &#39;1100&#39;</span>
+<span style="color:#75715e">#bits2 = &#39;1010&#39;</span>
+<span style="color:#75715e">#print (XORbits(bits1,bits2))</span>
+
+
+SBOX <span style="color:#f92672">=</span> [
+<span style="color:#75715e"># Box-1</span>
+[
+[<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">7</span>],
+[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>],
+[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">0</span>],
+[<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">13</span>]
+],
+<span style="color:#75715e"># Box-2</span>
+
+[
+[<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>],
+[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">5</span>],
+[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">15</span>],
+[<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>]
+],
+
+<span style="color:#75715e"># Box-3</span>
+
+[
+[<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>],
+[<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">1</span>],
+[<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">7</span>],
+[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">12</span>]
+],
+
+<span style="color:#75715e"># Box-4</span>
+[
+[<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">15</span>],
+[<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>],
+[<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">4</span>],
+[<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">14</span>]
+],
+
+<span style="color:#75715e"># Box-5</span>
+[
+[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>],
+[<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">6</span>],
+[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">14</span>],
+[<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>]
+],
+<span style="color:#75715e"># Box-6</span>
+
+[
+[<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">11</span>],
+[<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>],
+[<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">6</span>],
+[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">13</span>]
+
+],
+<span style="color:#75715e"># Box-7</span>
+[
+[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">1</span>],
+[<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">6</span>],
+[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">2</span>],
+[<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">12</span>]
+],
+<span style="color:#75715e"># Box-8</span>
+
+[
+[<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">7</span>],
+[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">2</span>],
+[<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">8</span>],
+[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">11</span>]
+]
+
+]
+
+<span style="color:#75715e"># Let&#39;s define a table for quick conversion of sbox decimals to 4 bit binary</span>
+DECtoBIN4 <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>: <span style="color:#e6db74">&#39;0000&#39;</span>,
+            <span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#39;0001&#39;</span>,
+            <span style="color:#ae81ff">2</span>: <span style="color:#e6db74">&#39;0010&#39;</span>,
+            <span style="color:#ae81ff">3</span>: <span style="color:#e6db74">&#39;0011&#39;</span>,
+            <span style="color:#ae81ff">4</span>: <span style="color:#e6db74">&#39;0100&#39;</span>,
+            <span style="color:#ae81ff">5</span>: <span style="color:#e6db74">&#39;0101&#39;</span>,
+            <span style="color:#ae81ff">6</span>: <span style="color:#e6db74">&#39;0110&#39;</span>,
+            <span style="color:#ae81ff">7</span>: <span style="color:#e6db74">&#39;0111&#39;</span>,
+            <span style="color:#ae81ff">8</span>: <span style="color:#e6db74">&#39;1000&#39;</span>,
+            <span style="color:#ae81ff">9</span>: <span style="color:#e6db74">&#39;1001&#39;</span>,
+            <span style="color:#ae81ff">10</span>: <span style="color:#e6db74">&#39;1010&#39;</span>,
+            <span style="color:#ae81ff">11</span>: <span style="color:#e6db74">&#39;1011&#39;</span>,
+            <span style="color:#ae81ff">12</span>: <span style="color:#e6db74">&#39;1100&#39;</span>,
+            <span style="color:#ae81ff">13</span>: <span style="color:#e6db74">&#39;1101&#39;</span>,
+            <span style="color:#ae81ff">14</span>: <span style="color:#e6db74">&#39;1110&#39;</span>,
+            <span style="color:#ae81ff">15</span>: <span style="color:#e6db74">&#39;1111&#39;</span>}
+
+<span style="color:#75715e">#print(DECtoBIN4[12])</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pre_sbox_lookup</span>(xor_result):
+    blocklist<span style="color:#f92672">=</span>[xor_result[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">6</span>] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(xor_result),<span style="color:#ae81ff">6</span>)]
+    <span style="color:#66d9ef">return</span> blocklist
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sbox_lookup</span>(input6bitstr, sboxindex):
+    row <span style="color:#f92672">=</span> int(input6bitstr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> input6bitstr[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],base<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+    col <span style="color:#f92672">=</span> int(input6bitstr[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>],base<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+    sbox_value <span style="color:#f92672">=</span> SBOX[int(sboxindex)][row][col]
+    <span style="color:#66d9ef">return</span> DECtoBIN4[sbox_value]
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">des_round</span>(LE_inp32, RE_inp32, key48):
+    LE_out32 <span style="color:#f92672">=</span> RE_inp32
+    RE_tmp <span style="color:#f92672">=</span> functionF(RE_inp32,key48)
+    RE_out32 <span style="color:#f92672">=</span> XORbits(LE_inp32, RE_tmp)
+    
+    
+    <span style="color:#66d9ef">return</span> LE_out32, RE_out32
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">functionF</span>(bitstr32, keybitstr48):
+    outbitstr32 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    result_sbox_lookup <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    after_sbox_lookup <span style="color:#f92672">=</span> []
+    result_outbitstr32 <span style="color:#f92672">=</span> []
+    sbox_bits <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    expanded_right_48bit <span style="color:#f92672">=</span> Expansion(bitstr32, E_TABLE)
+    xor_result <span style="color:#f92672">=</span> XORbits(expanded_right_48bit, keybitstr48)
+    xor_result_6bits <span style="color:#f92672">=</span> pre_sbox_lookup(xor_result)
+    <span style="color:#66d9ef">for</span> i,j <span style="color:#f92672">in</span> zip(range(<span style="color:#ae81ff">0</span>,len(xor_result),<span style="color:#ae81ff">6</span>),range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">8</span>)):
+        sbox_bits <span style="color:#f92672">=</span> sbox_bits <span style="color:#f92672">+</span> sbox_lookup(xor_result[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">6</span>],j)
+    result_outbitstr32 <span style="color:#f92672">=</span> permutation_function(sbox_bits, P)
+    outbitstr32 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(result_outbitstr32)
+
+    <span style="color:#66d9ef">return</span> outbitstr32
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">des_enc</span>(inputblock, num_rounds, inputkey64): 
+    key_64bit <span style="color:#f92672">=</span> byteseq2binstr(inputkey64)
+    keylist <span style="color:#f92672">=</span> des_key_generation(key_64bit)
+    input_64bit <span style="color:#f92672">=</span> byteseq2binstr(inputblock)
+    inputblock <span style="color:#f92672">=</span> Permutation(input_64bit,BookInitPermOrder)
+    LE_init <span style="color:#f92672">=</span> inputblock[:<span style="color:#ae81ff">32</span>]
+    RE_init <span style="color:#f92672">=</span> inputblock[<span style="color:#ae81ff">32</span>:]    
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,num_rounds):
+        LE_init, RE_init <span style="color:#f92672">=</span> des_round(LE_init, RE_init,keylist[i])
+    cipherRevblock <span style="color:#f92672">=</span> RE_init <span style="color:#f92672">+</span> LE_init
+    cipher_block <span style="color:#f92672">=</span> Permutation(cipherRevblock, BookInvInitPermOrder)
+    cipherblock <span style="color:#f92672">=</span> bytes([int(cipher_block[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">8</span>],base <span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(cipher_block),<span style="color:#ae81ff">8</span>)])
+    <span style="color:#66d9ef">return</span> cipherblock
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">des_enc_test</span>(input_fname, inputkey64, num_rounds, output_fname):
+    finp <span style="color:#f92672">=</span> open(input_fname, <span style="color:#e6db74">&#39;rb&#39;</span>)
+    inpbyteseq <span style="color:#f92672">=</span> finp<span style="color:#f92672">.</span>read()
+    finp<span style="color:#f92672">.</span>close()
+    cipherblocks<span style="color:#f92672">=</span>[]
+    inpbyteseq<span style="color:#f92672">=</span>inpbyteseq<span style="color:#f92672">+</span>(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x20</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">8</span><span style="color:#f92672">-</span>(len(inpbyteseq)<span style="color:#f92672">%</span><span style="color:#ae81ff">8</span>))) <span style="color:#66d9ef">if</span> len(inpbyteseq)<span style="color:#f92672">%</span><span style="color:#ae81ff">8</span> <span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> inpbyteseq
+    blocklist<span style="color:#f92672">=</span>[inpbyteseq[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">8</span>] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(inpbyteseq),<span style="color:#ae81ff">8</span>)]
+    cipherblocks <span style="color:#f92672">=</span> [des_enc(i,num_rounds,inputkey64) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> blocklist]
+    cipherbyteseq <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(cipherblocks)
+    fout <span style="color:#f92672">=</span> open(output_fname, <span style="color:#e6db74">&#39;wb&#39;</span>)
+    fout<span style="color:#f92672">.</span>write(cipherbyteseq)
+    fout<span style="color:#f92672">.</span>close()
+
+    
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">des_dec</span>(inputblock, num_rounds, inputkey64):  
+    key_64bit <span style="color:#f92672">=</span> byteseq2binstr(inputkey64)
+    keylist <span style="color:#f92672">=</span> des_key_generation(key_64bit)
+    input_64bit <span style="color:#f92672">=</span> byteseq2binstr(inputblock)
+    inputblock <span style="color:#f92672">=</span> Permutation(input_64bit,BookInitPermOrder)
+    LE_init <span style="color:#f92672">=</span> inputblock[:<span style="color:#ae81ff">32</span>]
+    RE_init <span style="color:#f92672">=</span> inputblock[<span style="color:#ae81ff">32</span>:]    
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,num_rounds):
+        LE_init, RE_init <span style="color:#f92672">=</span> des_round(LE_init, RE_init,keylist[<span style="color:#ae81ff">15</span> <span style="color:#f92672">-</span> i])
+    plainRevblock <span style="color:#f92672">=</span> RE_init <span style="color:#f92672">+</span> LE_init
+    plain_block <span style="color:#f92672">=</span> Permutation(plainRevblock, BookInvInitPermOrder)
+    
+    plainblock <span style="color:#f92672">=</span> bytes([int(plain_block[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">8</span>],base <span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(plain_block),<span style="color:#ae81ff">8</span>)])
+    <span style="color:#66d9ef">return</span> plainblock
+    
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">des_dec_test</span>(input_fname, inputkey64, num_rounds, output_fname):
+    finp <span style="color:#f92672">=</span> open(input_fname, <span style="color:#e6db74">&#39;rb&#39;</span>)
+    cipherbyteseq <span style="color:#f92672">=</span> finp<span style="color:#f92672">.</span>read()
+    finp<span style="color:#f92672">.</span>close()
+    blocklist<span style="color:#f92672">=</span>[cipherbyteseq[i:i<span style="color:#f92672">+</span><span style="color:#ae81ff">8</span>] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(cipherbyteseq),<span style="color:#ae81ff">8</span>)]
+    plainblocks <span style="color:#f92672">=</span> []
+    plainblocks <span style="color:#f92672">=</span> [des_dec(i,num_rounds,inputkey64) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> blocklist]
+    plainbyteseq <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(plainblocks)
+    fout <span style="color:#f92672">=</span> open(output_fname, <span style="color:#e6db74">&#39;wb&#39;</span>)
+    fout<span style="color:#f92672">.</span>write(plainbyteseq)
+    fout<span style="color:#f92672">.</span>close()
+
+
+    
+<span style="color:#75715e">#def main():</span>
+    
+<span style="color:#75715e">#    inputblock = b&#39;\x02\x46\x8a\xce\xec\xa8\x64\x20&#39;</span>
+<span style="color:#75715e">#    key = b&#39;\x0f\x15\x71\xc9\x47\xd9\xe8\x59&#39;</span>
+<span style="color:#75715e">#    cipherblock = &#39;\xda\x02\xce\x3a\x89\xec\xac\x3b&#39;</span>
+<span style="color:#75715e">#    cipherblock = des_enc(inputblock, 16, key)</span>
+<span style="color:#75715e">#    print(cipherblock)</span>
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    main()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>(): 
+    Plaintext <span style="color:#f92672">=</span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x02\x46\x8a\xce\xec\xa8\x64\x20</span><span style="color:#e6db74">&#39;</span>
+    Key <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x0f\x15\x71\xc9\x47\xd9\xe8\x59</span><span style="color:#e6db74">&#39;</span><span style="color:#75715e">#0f1571c947d9e859</span>
+    Ciphertext <span style="color:#f92672">=</span> des_enc(Plaintext, <span style="color:#ae81ff">16</span>, Key)
+    <span style="color:#66d9ef">print</span>(Ciphertext<span style="color:#f92672">.</span>hex())
+    Message <span style="color:#f92672">=</span> des_dec(Ciphertext, <span style="color:#ae81ff">16</span>, Key)
+    <span style="color:#66d9ef">print</span>(Message<span style="color:#f92672">.</span>hex())
+<span style="color:#75715e">#inp=&#34;test.txt&#34;</span>
+<span style="color:#75715e">#inputkey64= b&#39;\x0f\x15\x71\xc9\x47\xd9\xe8\x59&#39;</span>
+<span style="color:#75715e">#output=&#34;output_des.txt&#34;</span>
+<span style="color:#75715e">#des_enc_test(inp,inputkey64,16,output)</span>
+<span style="color:#75715e">#inp=&#34;output_des.txt&#34;</span>
+<span style="color:#75715e">#output=&#34;sample1_des.txt&#34;</span>
+<span style="color:#75715e">#des_dec_test(inp,inputkey64,16,output)</span>
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/des/">DES</a><a class="tag" href="/tags/python3/">python3</a><a class="tag" href="/tags/cryptography/">cryptography</a></span>
+
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>
