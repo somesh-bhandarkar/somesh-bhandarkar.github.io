@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 14:55:28 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 15:09:10 -0400</lastBuildDate>
     
 	<atom:link href="https://somesh-bhandarkar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>factorization</title>
       <link>https://somesh-bhandarkar.github.io/tags/factorization/</link>
-      <pubDate>Sun, 14 Jun 2020 14:55:28 -0400</pubDate>
+      <pubDate>Sun, 14 Jun 2020 15:09:10 -0400</pubDate>
       
       <guid>https://somesh-bhandarkar.github.io/tags/factorization/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>prime factors</title>
       <link>https://somesh-bhandarkar.github.io/tags/prime-factors/</link>
-      <pubDate>Sun, 14 Jun 2020 14:55:28 -0400</pubDate>
+      <pubDate>Sun, 14 Jun 2020 15:09:10 -0400</pubDate>
       
       <guid>https://somesh-bhandarkar.github.io/tags/prime-factors/</guid>
       <description></description>
@@ -32,16 +32,25 @@
     <item>
       <title>python</title>
       <link>https://somesh-bhandarkar.github.io/tags/python/</link>
-      <pubDate>Sun, 14 Jun 2020 14:55:28 -0400</pubDate>
+      <pubDate>Sun, 14 Jun 2020 15:09:10 -0400</pubDate>
       
       <guid>https://somesh-bhandarkar.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>recursion</title>
+      <link>https://somesh-bhandarkar.github.io/tags/recursion/</link>
+      <pubDate>Sun, 14 Jun 2020 15:09:10 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/tags/recursion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>SMT</title>
       <link>https://somesh-bhandarkar.github.io/tags/smt/</link>
-      <pubDate>Sun, 14 Jun 2020 14:55:28 -0400</pubDate>
+      <pubDate>Sun, 14 Jun 2020 15:09:10 -0400</pubDate>
       
       <guid>https://somesh-bhandarkar.github.io/tags/smt/</guid>
       <description></description>
@@ -50,7 +59,7 @@
     <item>
       <title>Z3</title>
       <link>https://somesh-bhandarkar.github.io/tags/z3/</link>
-      <pubDate>Sun, 14 Jun 2020 14:55:28 -0400</pubDate>
+      <pubDate>Sun, 14 Jun 2020 15:09:10 -0400</pubDate>
       
       <guid>https://somesh-bhandarkar.github.io/tags/z3/</guid>
       <description></description>

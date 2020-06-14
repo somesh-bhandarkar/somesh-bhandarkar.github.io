@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SMT on </title>
-    <link>https://somesh-bhandarkar.github.io/tags/smt/</link>
-    <description>Recent content in SMT on </description>
+    <title>recursion on </title>
+    <link>https://somesh-bhandarkar.github.io/tags/recursion/</link>
+    <description>Recent content in recursion on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Jun 2020 15:09:10 -0400</lastBuildDate>
     
-	<atom:link href="https://somesh-bhandarkar.github.io/tags/smt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://somesh-bhandarkar.github.io/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,15 +17,6 @@
       <pubDate>Sun, 14 Jun 2020 15:09:10 -0400</pubDate>
       
       <guid>https://somesh-bhandarkar.github.io/post/z3smt-primefac-2/</guid>
-      <description>This program finds the prime factors for very large numbers. I have written two approaches to solve this particular problem, this is the first approach.</description>
-    </item>
-    
-    <item>
-      <title>Finding Prime Factors of a Large Number using Z3 SMT Solver</title>
-      <link>https://somesh-bhandarkar.github.io/post/z3smt-primefac-1/</link>
-      <pubDate>Sun, 14 Jun 2020 14:55:28 -0400</pubDate>
-      
-      <guid>https://somesh-bhandarkar.github.io/post/z3smt-primefac-1/</guid>
       <description>This program finds the prime factors for very large numbers. I have written two approaches to solve this particular problem, this is the first approach.</description>
     </item>
     
