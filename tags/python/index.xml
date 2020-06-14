@@ -6,10 +6,19 @@
     <description>Recent content in python on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 15:15:59 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 15:21:41 -0400</lastBuildDate>
     
 	<atom:link href="https://somesh-bhandarkar.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Solving Minesweeper using Z3 SMT solver</title>
+      <link>https://somesh-bhandarkar.github.io/post/mine_solver/</link>
+      <pubDate>Sun, 14 Jun 2020 15:21:41 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/post/mine_solver/</guid>
+      <description>This program solves a 9x9 minesweeper grid it can also be tried for other lengths.</description>
+    </item>
     
     <item>
       <title>Breaking MD5 algorithm using a Dictionary Attack</title>

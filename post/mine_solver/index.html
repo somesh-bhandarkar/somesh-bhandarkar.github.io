@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="light"><head>
+    <title> Somesh Bhandarkar | Solving Minesweeper using Z3 SMT solver </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.70.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Graduate Candidate in Cybersecurity at the University of Maryland, College Park">
+    
+    <link rel="stylesheet" href="https://somesh-bhandarkar.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://somesh-bhandarkar.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://somesh-bhandarkar.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://somesh-bhandarkar.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://somesh-bhandarkar.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://somesh-bhandarkar.github.io/post/mine_solver/">
+    
+    
+    <script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://somesh-bhandarkar.github.io/img/prof.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m Somesh Bhandarkar</a></h3>
+        <div class="description">
+          <p>Graduate Candidate in Cybersecurity at the University of Maryland, College Park</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://linkedin.com/linkedin.com/in/somesh-bhandarkar" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/somesh-bhandarkar" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="bsomesh98@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Somesh Bhandarkar 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">Home</a></li>
+        
+        
+        <li><a  href="/post/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/" title="">About</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Solving Minesweeper using Z3 SMT solver
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i><span class="date">Sun, Jun 14, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">3-minute read</span>
+        </div>
+        
+        </div>
+
+    <p>This program solves a 9x9 minesweeper grid it can also be tried for other lengths.
+It calculates the probability of a mine being present at a particular grid.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#75715e">#! /usr/bin/env python</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># Author: Somesh Bhandarkar</span>
+<span style="color:#75715e"># UID: 116715843</span>
+<span style="color:#75715e"># This program is written as a project for the course </span>
+<span style="color:#75715e">##</span>
+<span style="color:#75715e"># The program uses z3 SMT solver https://github.com/Z3Prover/z3</span>
+<span style="color:#75715e"># I have taken a few references for this approach</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># https://yurichev.com/writings/SAT_SMT_by_example.pdf</span>
+<span style="color:#75715e"># http://www.hakank.org/z3/</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># The sum will look something like this</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#		 00000000000</span>
+<span style="color:#75715e">#        01234567890</span>
+<span style="color:#75715e">#		 02-width--0</span>
+<span style="color:#75715e">#		 03 l      0</span>
+<span style="color:#75715e">#		 04 e      0</span>
+<span style="color:#75715e">#		 05 n      0</span>
+<span style="color:#75715e">#		 06 g      0</span>
+<span style="color:#75715e">#		 07 t      0</span>
+<span style="color:#75715e">#		 08 h      0</span>
+<span style="color:#75715e">#		 09		   0</span>
+<span style="color:#75715e">#		 00000000000</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#	The 0 is where the border is and the value inside it will</span>
+<span style="color:#75715e">#   always be 0, as there is no possibility of a mine being there</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># The program uses a binary 0/1 approach for the mine placement</span>
+<span style="color:#75715e"># The program uses a list of list/matrix entry to store the boolean</span>
+<span style="color:#75715e"># The main unknown here is whether there is a mine in the unknown grid</span>
+<span style="color:#75715e"># I have solved this problem by feeding constraints to the SMT Solver</span>
+<span style="color:#75715e"># and checking satisfiability</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># </span>
+<span style="color:#f92672">from</span> z3 <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">import</span> sys
+<span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> product, starmap
+
+s <span style="color:#f92672">=</span> Solver()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initial_config</span>(length, width):
+	s <span style="color:#f92672">=</span> Solver()
+	<span style="color:#66d9ef">global</span> grids
+	grids<span style="color:#f92672">=</span>[]
+	<span style="color:#75715e">#blocks = []</span>
+	<span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,  length<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>):
+		t <span style="color:#f92672">=</span> []
+		<span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,  width<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>):
+			t <span style="color:#f92672">+=</span> [ Int(<span style="color:#e6db74">&#39;(</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">)&#39;</span> <span style="color:#f92672">%</span> (r,c)) ]
+		grids<span style="color:#f92672">.</span>append(t)
+
+	<span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> range(width<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>):
+		<span style="color:#75715e">#s.add(grids[length+1][c]==0)</span>
+		<span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> range(length<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>):
+			<span style="color:#66d9ef">if</span> r<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> c<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>:
+				s<span style="color:#f92672">.</span>add(grids[r][c]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+
+			<span style="color:#66d9ef">if</span> r<span style="color:#f92672">==</span>length<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>:
+				s<span style="color:#f92672">.</span>add(grids[r][c]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+
+			<span style="color:#66d9ef">if</span> c<span style="color:#f92672">==</span>width<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>:
+				s<span style="color:#f92672">.</span>add(grids[r][c]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+
+	<span style="color:#66d9ef">return</span> grids
+
+<span style="color:#75715e">#def place_mine(grids):</span>
+<span style="color:#75715e">#	s = Solver()</span>
+<span style="color:#75715e">#	for r in range (1, length +1):</span>
+<span style="color:#75715e">#		for c in range (1, width +1):</span>
+<span style="color:#75715e">#			s.add(grids[r][c]==0,grids[r][c]==1)</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">neighbours</span>(r,c):
+	neigh <span style="color:#f92672">=</span> []
+	l1 <span style="color:#f92672">=</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+	l2 <span style="color:#f92672">=</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+	neigh <span style="color:#f92672">=</span> ([r<span style="color:#f92672">+</span>a,c<span style="color:#f92672">+</span>b] <span style="color:#66d9ef">for</span> a <span style="color:#f92672">in</span> l1 <span style="color:#66d9ef">for</span> b <span style="color:#f92672">in</span> l2)
+	<span style="color:#66d9ef">return</span> (list(neigh))
+	<span style="color:#75715e">#return(neighbors(r, c))</span>
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_mine</span>(row , col):
+	s <span style="color:#f92672">=</span> Solver()
+
+	<span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">1</span>, length <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+		<span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">1</span>, width <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+			S <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>]
+			
+			temp<span style="color:#f92672">=</span>the_game[r <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][c <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+			<span style="color:#66d9ef">if</span> temp <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;012345678&#34;</span>:
+				s<span style="color:#f92672">.</span>add(grids[r][c ]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)
+
+				listing <span style="color:#f92672">=</span> neighbours(r,c)
+				temp_i,temp_j <span style="color:#f92672">=</span> listing[<span style="color:#ae81ff">0</span>]
+
+				express <span style="color:#f92672">=</span> grids[temp_i][temp_j]
+
+				<span style="color:#66d9ef">for</span> i,j <span style="color:#f92672">in</span> listing[<span style="color:#ae81ff">1</span>:]:
+					express <span style="color:#f92672">+=</span> grids[i][j]
+				<span style="color:#75715e">#add += grids[r+a,c+b] for a in S for b in S </span>
+				<span style="color:#75715e">#					if r + a &gt;= 0 and c + b &gt;= 0 and r + a &lt; length+1 and c + b &lt; width+1</span>
+				const<span style="color:#f92672">=</span> express <span style="color:#f92672">==</span> int(temp)
+				<span style="color:#75715e">#print express</span>
+				<span style="color:#75715e">#print &#34;\n&#34;, listing</span>
+				<span style="color:#75715e">#sys.exit(0)</span>
+				s<span style="color:#f92672">.</span>add(const)
+
+	s<span style="color:#f92672">.</span>add(grids[row][col]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>)
+
+	<span style="color:#75715e">#if s.check==sat:</span>
+	<span style="color:#75715e">#	print &#34;There may be a bomb at {} {}&#34;.format(row,col)</span>
+	<span style="color:#66d9ef">if</span> s<span style="color:#f92672">.</span>check()<span style="color:#f92672">==</span>unsat:
+		<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;Safe to play {} {}&#34;</span><span style="color:#f92672">.</span>format(row,col)
+
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+	<span style="color:#66d9ef">global</span> width
+	<span style="color:#66d9ef">global</span> length
+	<span style="color:#66d9ef">global</span> the_game
+	the_problem <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>]
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;The Problem is from:&#34;</span>, the_problem
+	the_game <span style="color:#f92672">=</span> read_problem(the_problem)
+	width <span style="color:#f92672">=</span> len(the_game[<span style="color:#ae81ff">0</span>])
+	length <span style="color:#f92672">=</span> len(the_game)
+	print_problem(the_game)
+	<span style="color:#75715e">#just_checking()</span>
+	<span style="color:#75715e">#print &#34;w:&#34;, width, &#34;l:&#34;, length</span>
+	<span style="color:#75715e">#print the_game</span>
+	grids <span style="color:#f92672">=</span> initial_config(length, width)
+	<span style="color:#75715e">#print grids</span>
+	<span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">1</span>, length <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+		<span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">1</span>, width <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+			<span style="color:#66d9ef">if</span> the_game[r<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][c<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;X&#34;</span>:
+				<span style="color:#75715e">#place_mine(grids)</span>
+				<span style="color:#75715e">#print r,c</span>
+				add_mine (r, c)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_problem</span>(listing):
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;The grid is:&#34;</span>
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> listing:
+		<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34;</span>, i
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_problem</span>(file):
+	lines <span style="color:#f92672">=</span> []
+	<span style="color:#66d9ef">with</span> open(file , <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+		lines <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>readlines()
+		lst <span style="color:#f92672">=</span> []
+    	<span style="color:#66d9ef">for</span> items <span style="color:#f92672">in</span> lines:
+    		items <span style="color:#f92672">=</span> items<span style="color:#f92672">.</span>rstrip(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    		lst<span style="color:#f92672">.</span>append(items)
+
+    	<span style="color:#66d9ef">return</span> lst
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">just_checking</span>():
+	<span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;w:&#34;</span>, width, <span style="color:#e6db74">&#34;l:&#34;</span>, length
+	<span style="color:#66d9ef">print</span> the_game
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+	main()
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/minesweeper/">Minesweeper</a><a class="tag" href="/tags/pussle/">pussle</a><a class="tag" href="/tags/python/">python</a><a class="tag" href="/tags/python3/">python3</a><a class="tag" href="/tags/z3/">Z3</a><a class="tag" href="/tags/smt/">SMT</a></span>
+
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://somesh-bhandarkar.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>
