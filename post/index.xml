@@ -6,10 +6,19 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 15:42:53 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2020 12:59:33 -0400</lastBuildDate>
     
 	<atom:link href="https://somesh-bhandarkar.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Daily bugle TryHackMe</title>
+      <link>https://somesh-bhandarkar.github.io/post/dailybugle/</link>
+      <pubDate>Mon, 15 Jun 2020 12:59:33 -0400</pubDate>
+      
+      <guid>https://somesh-bhandarkar.github.io/post/dailybugle/</guid>
+      <description>Daily Bugle TryHackMe Enumeration Nmap Command Used  nmap -sC -sV -O -oA recon/dailybugle 10.</description>
+    </item>
     
     <item>
       <title>Des in python</title>
